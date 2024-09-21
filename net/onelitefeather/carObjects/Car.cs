@@ -1,4 +1,4 @@
-namespace VehicleExample;
+namespace VehicleExample.net.onelitefeather.carObjects;
 
 public abstract class Car
 {

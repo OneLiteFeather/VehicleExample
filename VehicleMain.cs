@@ -1,4 +1,6 @@
-﻿namespace VehicleExample
+﻿using VehicleExample.net.onelitefeather.carObjects;
+
+namespace VehicleExample
 {
     class VehicleMain
     {
