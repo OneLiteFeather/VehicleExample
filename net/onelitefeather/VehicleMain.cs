@@ -1,6 +1,6 @@
 ﻿using VehicleExample.net.onelitefeather.carObjects;
 
-namespace VehicleExample
+namespace VehicleExample.net.onelitefeather
 {
     class VehicleMain
     {
