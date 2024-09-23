@@ -47,7 +47,6 @@ public abstract class Car(int doors, string color, int horsepower, double kilome
     {
         return Fuel;
     }
-
     public void SetFuel(double fuel)
     {
         Fuel = fuel;

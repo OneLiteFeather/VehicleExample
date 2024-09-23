@@ -2,15 +2,21 @@ namespace VehicleExample.net.onelitefeather.carObjects;
 
 public class Van : Kombi
 {
-    private bool loadingArea;
+    private readonly bool loadingArea;
     
-    public Van(string color, int ps, bool hasLoadingArea) : base(color, ps)
+    public Van(string color, int ps, bool hasLoadingArea, double kilometer) : base(color, ps, kilometer)
     {
         loadingArea = hasLoadingArea;
         if (loadingArea)
         {
             Doors = 2;
+            SetFuel(12);
         }
+        else
+        {
+            SetFuel(10);
+        }
+        
     }
 
     public override string GetInfo()
