@@ -1,18 +1,13 @@
 namespace VehicleExample.net.onelitefeather.carObjects;
 
-public abstract class Car
+public abstract class Car(int doors, string color, int horsepower, double kilometer, double fuel)
 {
-    protected int Doors; // only set once in constructor
-    private string Color; // Get and set
-    private int Horsepower; // Get and set
-    
-    protected Car(int doors, string color, int horsepower)
-    {
-        Doors = doors;
-        Color = color;
-        Horsepower = horsepower;
-    }
-    
+    protected int Doors = doors; // only set once in constructor
+    private string Color = color; // Get and set
+    private int Horsepower = horsepower; // Get and set
+    private double Kilometer = kilometer;
+    private double Fuel = fuel;
+
     public int GetDoorsAmount()
     {
         return Doors;
@@ -38,9 +33,40 @@ public abstract class Car
         Horsepower = horsepower;
     }
 
+    public void SetKilometer(double kilometer)
+    {
+        Kilometer = kilometer;
+    }
+
+    public double GetKilometer()
+    {
+        return Kilometer;
+    }
+
+    public double GetFuel()
+    {
+        return Fuel;
+    }
+
+    public void SetFuel(double fuel)
+    {
+        Fuel = fuel;
+    }
+
     public virtual string GetInfo()
     {
-        return ($"Car Info: {Doors} doors, {Color} color, {Horsepower} horsepower");
+        return $"Car Info: {Doors} doors, {Color} color, {Horsepower} horsepower";
+    }
+
+    public double GetFuelConsumption()
+    {
+        var fuelConsumption = (GetFuel() / 100.0) * GetKilometer();
+        return fuelConsumption; // k
+    }
+
+    public string PrintGetFuelConsumption()
+    {
+        return $"Fuel consumption: {GetFuelConsumption()}";
     }
     
 }
